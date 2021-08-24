@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &-right-side{
+    &-nav {
+      list-style-type: none;
+    }
+  }
+}

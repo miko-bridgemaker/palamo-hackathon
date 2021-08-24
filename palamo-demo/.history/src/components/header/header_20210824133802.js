@@ -21,9 +21,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-logo-container">
-        <a href="https://palamo.com">
-          <img src={logoURL} alt="Palamo" width="70px" height="70px" />
-        </a>
+        <img src={logoURL} alt="Palamo" width="70px" height="70px" />
       </div>
       <div className="header-right-side">
         <nav className="header-right-side-nav">
@@ -33,12 +31,12 @@ function Header() {
           <li><a href="https://palamo.com/t/aboutus" className="header-right-side-nav-item">About us</a></li>
           <li><a href="https://palamo.com/t/16/contact-us" className="header-right-side-nav-item">Contact</a></li>
           <li className="header-right-side-nav-user-menu">
+            <Avatar
+              src={<img src={avatar1URL} alt="User avatar" width="32px" height="32px" />}
+              style={{"margin-right": "5px"}}
+            />
             <Dropdown overlay={menu} overlayClassName="header-right-side-nav-dropdown">
               <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                <Avatar
-                  src={<img src={avatar1URL} alt="User avatar" width="32px" height="32px" />}
-                  style={{"margin-right": "5px"}}
-                />
                 My account <DownOutlined />
               </a>
             </Dropdown>
