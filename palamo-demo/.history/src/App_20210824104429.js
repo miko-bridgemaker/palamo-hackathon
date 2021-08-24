@@ -1,10 +1,10 @@
-import './App.scss';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        test22
+        test
       </header>
     </div>
   );
