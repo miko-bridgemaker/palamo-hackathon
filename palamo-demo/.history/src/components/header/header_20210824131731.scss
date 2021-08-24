@@ -18,28 +18,6 @@
         }
       }
 
-      &-dropdown {
-        .ant-dropdown-menu-item-active {
-          .ant-dropdown-menu-title-content {
-            color: $clr-prm;
-          }
-        }
-
-        .ant-dropdown-menu {
-          left: 35px;
-        }
-      }
-
-      &-user-menu {
-        .ant-dropdown-trigger {
-          color: $clr-prm;
-        }
-
-        svg {
-          fill: $clr-prm;
-        }
-      }
-
       li {
         display: inline-block;
         margin: 0 15px;

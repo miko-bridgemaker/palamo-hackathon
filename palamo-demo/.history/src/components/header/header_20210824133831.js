@@ -21,9 +21,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-logo-container">
-        <a href="https://palamo.com">
-          <img src={logoURL} alt="Palamo" width="70px" height="70px" />
-        </a>
+        <img src={logoURL} alt="Palamo" width="70px" height="70px" />
       </div>
       <div className="header-right-side">
         <nav className="header-right-side-nav">
