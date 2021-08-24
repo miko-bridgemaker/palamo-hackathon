@@ -1,4 +1,6 @@
 import React from 'react'
+import { ShoppingCartOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
 
 const Footer = () => {
     let price = 65;
@@ -11,8 +13,14 @@ const Footer = () => {
                 <div className='price-amount'>{price} €</div>
             </div>
             <div className='footer-cart'>
-                <button>Add to cart</button>
-                <button>help</button>
+            <Button type="primary" shape="round" icon={<ShoppingCartOutlined />} size='large'>
+                Buy now
+            </Button>
+                    
+                    
+            <Button type="Default button" shape="round" icon={<QuestionCircleOutlined />} size='large'>
+                Get help
+            </Button>
             </div>
         </div>
     )

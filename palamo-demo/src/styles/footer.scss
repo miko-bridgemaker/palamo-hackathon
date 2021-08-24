@@ -19,5 +19,18 @@
 
     .footer-cart {
         color:pink;
+
+        .ant-btn-primary {
+            border-color: $clr-snd;
+            background-color: $clr-snd;
+            span {
+                color: $clr-acc;
+                font-weight: 500;
+
+                svg {
+                    fill: $clr-acc;
+                }
+            }
+        }
     }
 }
