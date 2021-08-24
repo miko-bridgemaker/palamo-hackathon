@@ -4,12 +4,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  box-shadow: 0 8px 8px -4px #ccc;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  background: #fff;
 
   &-right-side{
     &-nav {
@@ -31,6 +25,10 @@
           }
         }
 
+        .ant-dropdown-link {
+          cursor: pointer;
+        }
+
         .ant-dropdown-menu {
           left: 35px;
         }
@@ -39,10 +37,6 @@
       &-user-menu {
         .ant-dropdown-trigger {
           color: $clr-prm;
-        }
-
-        .ant-dropdown-trigger {
-          cursor: pointer;
         }
 
         svg {

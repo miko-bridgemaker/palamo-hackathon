@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ConfiguratorOptions from '../ConfiguratorOptions/ConfiguratorOptions';
+import { ConfiguratorOptions } from '../ConfiguratorOptions/ConfiguratorOptions';
 
 const Scene = () => {
     const [canvasWidth, setCanvasWidth] = useState(200);
@@ -36,7 +36,10 @@ const Scene = () => {
             <button onClick={() => handleCanvas()}>Update canvas</button>
 
         </div>
-        <ConfiguratorOptions />
+
+        <div>
+
+        </div>
       </div>
     )
 }

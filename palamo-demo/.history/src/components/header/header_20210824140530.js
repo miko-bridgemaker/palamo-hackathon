@@ -5,6 +5,10 @@ import basketURL from './shopping-cart.png';
 import avatar1URL from './avatar1.png';
 import logoURL from './palamo_logo.svg';
 
+// const onClick = ({ key }) => {
+//   message.info(`Click on item ${key}`);
+// };
+
 const menu = (
   <Menu>
     <Menu.Item key="1">Orders</Menu.Item>

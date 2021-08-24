@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ConfiguratorOptions from '../ConfiguratorOptions/ConfiguratorOptions';
+import { ConfiguratorOptions } from '../ConfiguratorOptions/ConfiguratorOptions';
 
 const Scene = () => {
     const [canvasWidth, setCanvasWidth] = useState(200);
@@ -23,7 +23,6 @@ const Scene = () => {
       }
 
     return (
-      <div>
         <div className='app-scene'>
             <div className='canvas' id='canvas'></div>
             <div className='background-material' id='material'></div>
@@ -34,10 +33,11 @@ const Scene = () => {
             <button onClick={() => roundCanvas(9999)}>Make it round</button>
             <button onClick={() => roundCanvas(0)}>Make it square</button>
             <button onClick={() => handleCanvas()}>Update canvas</button>
+            
+        </div>
+        <div>
 
         </div>
-        <ConfiguratorOptions />
-      </div>
     )
 }
 
