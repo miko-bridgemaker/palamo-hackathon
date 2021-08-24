@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+
+  &-right-side{
+    &-nav {
+      list-style-type: none;
+
+      &-item {
+        font-size: 16px;
+        color: $clr-black;
+
+        &:hover {
+          color: $clr-prm;
+        }
+      }
+
+      li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+    }
+  }
+}

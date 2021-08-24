@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+
+  &-right-side{
+    &-nav {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+    }
+  }
+}
