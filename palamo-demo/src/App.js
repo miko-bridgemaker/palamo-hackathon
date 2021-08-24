@@ -1,13 +1,15 @@
 import './App.scss';
-import './components/scene'
+import Scene from './components/Scene.js'
+import Footer from './components/Footer.js'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         test22
-        <scene />
       </header>
+      <Scene />
+      <Footer />
     </div>
   );
 }

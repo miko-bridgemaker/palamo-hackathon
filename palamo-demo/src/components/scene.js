@@ -1,13 +1,11 @@
 import React from 'react'
 
-function scene() {
+const Scene = () => {
     return (
-        <div>
-            <div>
+        <div className='App-scene'>
                 <h2>Something</h2>
-            </div>
         </div>
     )
 }
 
-export default scene
+export default Scene
