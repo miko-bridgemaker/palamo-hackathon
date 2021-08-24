@@ -4,7 +4,6 @@ const Scene = () => {
     const [canvasWidth, setCanvasWidth] = useState(200);
     const [canvasHeight, setCanvasHeight] = useState(200);
     const [canvasRadius, setCanvasRadius] = useState(0);
-    const [material, setMaterial] = useState();
     const handleCanvas = () =>{
         document.getElementById('canvas').style.width = `${canvasWidth}px`;
         document.getElementById('canvas').style.height = `${canvasHeight}px`;
@@ -18,19 +17,10 @@ const Scene = () => {
 
       };
 
-      const handleMaterial = () =>{
-        document.getElementById('material').style.background = `${material}`;
-      }
-
       const roundCanvas = (x) => {
         setCanvasRadius(x);
       }
 
-      const setBgMaterial = (x) => {
-        setMaterial(x);
-      }
-
-    
     return (
         <div className='app-scene'>
             <div className='canvas' id='canvas'></div>
@@ -41,16 +31,7 @@ const Scene = () => {
             <button onClick={() => setCanvasWidth(canvasWidth+100)}>+ width</button>
             <button onClick={() => roundCanvas(9999)}>Make it round</button>
             <button onClick={() => roundCanvas(0)}>Make it square</button>
-
             <button onClick={() => handleCanvas()}>Update canvas</button>
-            <br></br>
-
-            <button onClick={() => setBgMaterial('blue')}>Blue material</button>
-            <button onClick={() => setBgMaterial('red')}>Red material</button>
-
-            <button onClick={() => handleMaterial()}>Update material</button>
-            <br></br>
-            
             
         </div>
     )
