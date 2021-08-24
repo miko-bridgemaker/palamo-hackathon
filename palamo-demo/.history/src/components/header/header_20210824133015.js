@@ -5,12 +5,12 @@ import basketURL from './shopping-cart.png';
 import avatar1URL from './avatar1.png';
 import logoURL from './palamo_logo.svg';
 
-// const onClick = ({ key }) => {
-//   message.info(`Click on item ${key}`);
-// };
+const onClick = ({ key }) => {
+  message.info(`Click on item ${key}`);
+};
 
 const menu = (
-  <Menu>
+  <Menu onClick={onClick}>
     <Menu.Item key="1">Orders</Menu.Item>
     <Menu.Item key="2">Personal details</Menu.Item>
     <Menu.Item key="3">Logout</Menu.Item>
@@ -21,9 +21,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-logo-container">
-        <a href="https://palamo.com">
-          <img src={logoURL} alt="Palamo" width="70px" height="70px" />
-        </a>
+        <img src={logoURL} alt="Palamo" width="70px" height="70px" />
       </div>
       <div className="header-right-side">
         <nav className="header-right-side-nav">
@@ -33,20 +31,19 @@ function Header() {
           <li><a href="https://palamo.com/t/aboutus" className="header-right-side-nav-item">About us</a></li>
           <li><a href="https://palamo.com/t/16/contact-us" className="header-right-side-nav-item">Contact</a></li>
           <li className="header-right-side-nav-user-menu">
+            <Avatar
+              src={<img src={avatar1URL} alt="User avatar" width="32px" height="32px" />}
+            />
             <Dropdown overlay={menu} overlayClassName="header-right-side-nav-dropdown">
               <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                <Avatar
-                  src={<img src={avatar1URL} alt="User avatar" width="32px" height="32px" />}
-                  style={{"margin-right": "5px"}}
-                />
-                My account <DownOutlined />
+                MY ACCOUNT <DownOutlined />
               </a>
             </Dropdown>
           </li>
           <li>
             <a href="#">
-              <Badge count={0} offset={[-5, 4]} showZero size="small">
-                <img src={basketURL} alt="Palamo basket" width="26px" height="26px" />
+              <Badge count={0} offset={[-10, 10]} showZero>
+                <img src={basketURL} alt="Palamo basket" width="32px" height="32px" />;
               </Badge>
             </a>
           </li>
