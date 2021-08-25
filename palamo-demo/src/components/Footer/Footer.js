@@ -2,6 +2,7 @@ import { React , useState } from 'react';
 import { Button } from 'antd';
 
 const Footer = ( {price} ) => {
+
     return (
         <div className='App-footer'>
             <div className='footer-selivery'>Estimated Delivery: 7-9 workdays<br/>

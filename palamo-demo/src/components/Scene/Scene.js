@@ -1,32 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ConfiguratorOptions from '../ConfiguratorOptions/ConfiguratorOptions';
 
 const Scene = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
+  function collectState() {
+    return totalPrice;
+  }
 
   let handleChange = (ele) => {
     setTotalPrice(ele.target.value);
     props.getChildChange(collectState());
   }
-  handleChange = handleChange.bind(this);
-  function collectState() {
-    return totalPrice;
-  }
 
+  handleChange = handleChange.bind(this); 
+  useEffect(() => {   
+   props.getChildChange(collectState());
+},[totalPrice]);
+
+  //calculate mm to pixels
+  const mmToPx = (e) => {
+    return e*3.7795275591;
+  }
     const [canvasWidth, setCanvasWidth] = useState(200);
     const [canvasHeight, setCanvasHeight] = useState(200);
     const [canvasRadius, setCanvasRadius] = useState(0);
     const [material, setMaterial] = useState();
     const [varnish, setVarnish] = useState();
     const handleCanvas = () =>{
-        document.getElementById('canvas').style.width = `${canvasWidth}px`;
-        document.getElementById('canvas').style.height = `${canvasHeight}px`;
+        document.getElementById('canvas').style.width = `${mmToPx(canvasWidth)}px`;
+        document.getElementById('canvas').style.height = `${mmToPx(canvasHeight)}px`;
         document.getElementById('canvas').style.borderRadius = `${canvasRadius}px`;
-        document.getElementById('material').style.width = `${canvasWidth}px`;
-        document.getElementById('material').style.height = `${canvasHeight}px`;
+        document.getElementById('material').style.width = `${mmToPx(canvasWidth)}px`;
+        document.getElementById('material').style.height = `${mmToPx(canvasHeight)}px`;
         document.getElementById('material').style.borderRadius = `${canvasRadius}px`;
-        document.getElementById('label').style.width = `${canvasWidth}px`;
-        document.getElementById('label').style.height = `${canvasHeight}px`;
+        document.getElementById('label').style.width = `${mmToPx(canvasWidth)}px`;
+        document.getElementById('label').style.height = `${mmToPx(canvasHeight)}px`;
         document.getElementById('label').style.borderRadius = `${canvasRadius}px`;
 
       };
