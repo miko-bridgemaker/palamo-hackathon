@@ -21,8 +21,8 @@ const Scene = (props) => {
   const mmToPx = (e) => {
     return e*3.7795275591;
   }
-    const [canvasWidth, setCanvasWidth] = useState(200);
-    const [canvasHeight, setCanvasHeight] = useState(200);
+    const [canvasWidth, setCanvasWidth] = useState(20);
+    const [canvasHeight, setCanvasHeight] = useState(20);
     const [canvasRadius, setCanvasRadius] = useState(0);
     const [material, setMaterial] = useState();
     const [varnish, setVarnish] = useState();
@@ -36,6 +36,9 @@ const Scene = (props) => {
         document.getElementById('label').style.width = `${mmToPx(canvasWidth)}px`;
         document.getElementById('label').style.height = `${mmToPx(canvasHeight)}px`;
         document.getElementById('label').style.borderRadius = `${canvasRadius}px`;
+        document.getElementById('bleed').style.width = `${mmToPx(canvasWidth-3)}px`;
+        document.getElementById('bleed').style.height = `${mmToPx(canvasHeight-3)}px`;
+        document.getElementById('bleed').style.borderRadius = `${canvasRadius}px`;
 
       };
 
@@ -89,6 +92,7 @@ const Scene = (props) => {
             <div className='canvas' id='canvas'></div>
             <div className='background-material' id='material'></div>
             <div className='user-img' id='label'><img id="myImg" src="#"></img></div>
+            <div className='bleed' id='bleed'></div>
             {canvasHeight}px/{canvasWidth}px
             <button onClick={() => setCanvasHeight(canvasHeight+100)}>+ height</button>
             <button onClick={() => setCanvasWidth(canvasWidth+100)}>+ width</button>
