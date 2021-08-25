@@ -1,6 +1,17 @@
 import { useState } from 'react';
 
-const Scene = () => {
+const Scene = (props) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  let handleChange = (ele) => {
+    setTotalPrice(ele.target.value);
+    props.getChildChange(collectState());
+  }
+  handleChange = handleChange.bind(this);
+  function collectState() {
+    return totalPrice;
+  }
+
     const [canvasWidth, setCanvasWidth] = useState(200);
     const [canvasHeight, setCanvasHeight] = useState(200);
     const [canvasRadius, setCanvasRadius] = useState(0);
@@ -87,6 +98,8 @@ const Scene = () => {
             <button onClick={() => finishing(0)}>Make it shiny</button>
             <button onClick={() => finishing(1)}>Make it matte</button>
             <button onClick={() => (handleMaterial(), handleCanvas(), handleVarnish())}>Update varnish</button>
+            <br />
+            <input onChange={handleChange} type='number' value={totalPrice}></input>
         </div>
     )
 }
