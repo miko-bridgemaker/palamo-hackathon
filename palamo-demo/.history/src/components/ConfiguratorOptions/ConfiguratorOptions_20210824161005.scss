@@ -1,0 +1,37 @@
+.ConfiguratorOptions {
+  position: fixed;
+  top: 100px;
+  right: 0px;
+  width: 35%;
+  background: #fff;
+  overflow-y: scroll;
+  bottom: 100px;
+
+  &-item {
+    &-shape {
+      &-grey {
+        background: #979797;
+      }
+
+      &-beige {
+        background: #F7F0F0;
+      }
+
+      &-darkYellow {
+        background: #D7C2A3;
+      }
+
+      &-wave {
+        background: linear-gradient(180deg, #D8D8D8 0%, #FFFFFF 23.83%, #F8F7F6 39.45%, #D8D8D8 59.76%, #FFFFFF 75.91%, #BABABA 91.54%);
+      }
+
+      &-yellow {
+        background: #FFF7EA;
+      }
+
+      &-lightGrey {
+        background: #FFF7EA;
+      }
+    }
+  }
+}

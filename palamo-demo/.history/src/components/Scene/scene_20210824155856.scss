@@ -1,0 +1,46 @@
+.app-scene {
+    // width: 66vw;
+    // height: 90vh;
+    background-color: $clr-bg;
+    margin-top: 100px;
+
+    grid-area: main;
+    max-height: 100%;
+    position: sticky;
+    overflow: hidden;
+    height: 100vh;
+    top: 0;
+
+
+
+    .canvas {
+        z-index: $layer-1;
+        background-color: $clr-prm;
+        position: fixed;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        height: 200px;
+        width: 200px;
+    }
+
+    .background-material {
+        z-index: $layer-2;
+        position: fixed;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    .user-img {
+        z-index: $layer-3;
+        position: fixed;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.scene {
+    margin-top: 100px;
+}

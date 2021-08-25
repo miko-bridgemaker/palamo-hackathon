@@ -1,0 +1,44 @@
+.app-scene {
+    width: 66vw;
+    height: 90vh;
+    background-color: $clr-bg;
+    margin-top: 100px;
+
+    .canvas {
+        z-index: $layer-1;
+        background-color: $clr-prm;
+        position: fixed;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        height: 200px;
+        width: 200px;
+    }
+
+    .background-material {
+        z-index: $layer-2;
+        position: fixed;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    .user-img {
+        z-index: $layer-3;
+        position: fixed;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.scene {
+    margin-top: 100px;
+    display: grid;
+    grid-template: "main aside" 1fr/9fr minmax(320px,1fr);
+    grid-gap: 0 var(--tds-size--6x);
+    -webkit-padding-end: var(--tds-size--6x);
+    padding-inline-end: var(--tds-size--6x);
+    scroll-margin-top: var(--tds-shell-header-height);
+    transition: none;
+}
