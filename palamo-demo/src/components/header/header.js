@@ -33,7 +33,7 @@ function Header() {
               <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                 <Avatar
                   src={<img src={avatar1URL} alt="User avatar" width="32px" height="32px" />}
-                  style={{"margin-right": "5px"}}
+                  style={{"marginRight": "5px"}}
                 />
                 My account <DownOutlined />
               </span>
