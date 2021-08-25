@@ -91,7 +91,7 @@
 
         &:focus {
           border-color: $clr-prm !important;
-          box-shadow: $clr-prm !important;
+          box-shadow: $clr-prm;
         }
       }
     }

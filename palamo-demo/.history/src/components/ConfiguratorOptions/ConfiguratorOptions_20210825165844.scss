@@ -90,8 +90,7 @@
         border: none;
 
         &:focus {
-          border-color: $clr-prm !important;
-          box-shadow: $clr-prm !important;
+          border-color: $clr-prm;
         }
       }
     }

@@ -87,12 +87,6 @@
       input {
         margin-bottom: 32px;
         background: #f6f6f6;
-        border: none;
-
-        &:focus {
-          border-color: $clr-prm !important;
-          box-shadow: $clr-prm !important;
-        }
       }
     }
   }

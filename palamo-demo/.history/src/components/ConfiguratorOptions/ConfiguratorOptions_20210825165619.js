@@ -2,6 +2,8 @@ import React from 'react';
 import { Input } from 'antd';
 
 const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updateWidthHandler, updateShapeHandler }) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+
   function updateMaterial(material) {
     updateMaterialHandler(material);
   }
