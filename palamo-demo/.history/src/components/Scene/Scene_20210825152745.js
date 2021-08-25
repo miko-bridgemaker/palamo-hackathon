@@ -74,7 +74,7 @@ const Scene = (props) => {
     useEffect(() => {
       handleMaterial();
       handleCanvas();
-    }, [material, canvasWidth, canvasHeight, canvasRadius, handleMaterial, handleCanvas]);
+    }, [material, canvasWidth, canvasHeight, handleMaterial, handleCanvas]);
 
     function updateHeight(height) {
       setCanvasHeight(height)

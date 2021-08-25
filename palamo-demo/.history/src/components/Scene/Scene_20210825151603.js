@@ -21,8 +21,8 @@ const Scene = (props) => {
   const mmToPx = (e) => {
     return e*3.7795275591;
   }
-    const [canvasWidth, setCanvasWidth] = useState(50);
-    const [canvasHeight, setCanvasHeight] = useState(50);
+    const [canvasWidth, setCanvasWidth] = useState(200);
+    const [canvasHeight, setCanvasHeight] = useState(200);
     const [canvasRadius, setCanvasRadius] = useState(0);
     const [material, setMaterial] = useState();
     const [varnish, setVarnish] = useState();
@@ -74,7 +74,7 @@ const Scene = (props) => {
     useEffect(() => {
       handleMaterial();
       handleCanvas();
-    }, [material, canvasWidth, canvasHeight, canvasRadius, handleMaterial, handleCanvas]);
+    }, [material, canvasWidth, canvasHeight, handleMaterial, handleCanvas]);
 
     function updateHeight(height) {
       setCanvasHeight(height)
@@ -82,10 +82,6 @@ const Scene = (props) => {
 
     function updateWidth(width) {
       setCanvasWidth(width)
-    }
-
-    function updateShape(value) {
-      setCanvasRadius(value);
     }
 
     window.addEventListener('load', function() {
@@ -131,7 +127,7 @@ const Scene = (props) => {
             <br />
             <input onChange={handleChange} type='number' value={totalPrice}></input>
         </div>
-        <ConfiguratorOptions updateMaterialHandler={updateMaterial} updateHeightHandler={updateHeight} updateWidthHandler={updateWidth} updateShapeHandler={updateShape} />
+        <ConfiguratorOptions updateMaterialHandler={updateMaterial} updateHeightHandler={updateHeight} updateWidthHandler={updateWidth} />
       </div>
     )
 }

@@ -1,41 +1,22 @@
 import React from 'react';
 import { Input } from 'antd';
 
-const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updateWidthHandler, updateShapeHandler }) => {
+const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updateWidthHandler }) => {
   function updateMaterial (material) {
     updateMaterialHandler(material);
   }
 
   function updateHeight (e) {
-    updateHeightHandler(parseInt(e.target.value));
+    debugger
+    updateHeightHandler(material);
   }
 
   function updateWidth (e) {
-    updateWidthHandler(parseInt(e.target.value));
-  }
-
-  function updateShape (value) {
-    updateShapeHandler(value);
+    updateWidthHandler(material);
   }
 
   return (
     <article className="ConfiguratorOptions">
-      <section className="ConfiguratorOptions-Shape">
-        <div className="ConfiguratorOptions-shape-container">
-          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, 0)}>
-            <div className="ConfiguratorOptions-shape-container-item-shape ConfiguratorOptions-shape-container-item-rectangular"></div>
-            <span className="ConfiguratorOptions-item-title">rectangular</span>
-          </div>
-          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, 0)}>
-            <div className="ConfiguratorOptions-shape-container-item-shape ConfiguratorOptions-shape-container-item-square"></div>
-            <span className="ConfiguratorOptions-item-title">square</span>
-          </div>
-          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, 1000000)}>
-            <div className="ConfiguratorOptions-shape-container-item-shape ConfiguratorOptions-shape-container-item-circle"></div>
-            <span className="ConfiguratorOptions-item-title">circle</span>
-          </div>
-        </div>
-      </section>
       <section className="ConfiguratorOptions-Size">
         <span className="ConfiguratorOptions-title">Size</span>
         <div className="ConfiguratorOptions-size-container">
@@ -44,8 +25,8 @@ const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updat
             <label>Width:</label>
           </div>
           <div className="ConfiguratorOptions-size-input-container">
-            <Input defaultValue={50} onChange={updateHeight} />
-            <Input defaultValue={50} onChange={updateWidth}/>
+            <Input defaultValue={50} onChange={updateHeightHandler} />
+            <Input defaultValue={50} onChange={updateWidthHandler}/>
           </div>
           <div className="ConfiguratorOptions-size-input-container">
 

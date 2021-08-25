@@ -29,14 +29,9 @@
     &-item {
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
       align-items: center;
       width: 100%;
-      height: 127px;
-      cursor: pointer;
-
-      &-shape {
-        margin-bottom: 10px;
-      }
     }
 
     &-item-rectangular {

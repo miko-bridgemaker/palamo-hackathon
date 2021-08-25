@@ -74,7 +74,7 @@ const Scene = (props) => {
     useEffect(() => {
       handleMaterial();
       handleCanvas();
-    }, [material, canvasWidth, canvasHeight, canvasRadius, handleMaterial, handleCanvas]);
+    }, [material, canvasWidth, canvasHeight, handleMaterial, handleCanvas]);
 
     function updateHeight(height) {
       setCanvasHeight(height)
@@ -82,10 +82,6 @@ const Scene = (props) => {
 
     function updateWidth(width) {
       setCanvasWidth(width)
-    }
-
-    function updateShape(value) {
-      setCanvasRadius(value);
     }
 
     window.addEventListener('load', function() {
@@ -131,7 +127,7 @@ const Scene = (props) => {
             <br />
             <input onChange={handleChange} type='number' value={totalPrice}></input>
         </div>
-        <ConfiguratorOptions updateMaterialHandler={updateMaterial} updateHeightHandler={updateHeight} updateWidthHandler={updateWidth} updateShapeHandler={updateShape} />
+        <ConfiguratorOptions updateMaterialHandler={updateMaterial} updateHeightHandler={updateHeight} updateWidthHandler={updateWidth} />
       </div>
     )
 }
