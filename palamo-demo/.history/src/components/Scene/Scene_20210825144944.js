@@ -59,7 +59,7 @@ const Scene = () => {
     }, [material, handleMaterial, handleCanvas]);
 
     function updateHeight(e) {
-      console.log('eh', e);
+      console.log('e', e);
     }
 
     function updateWidth(e) {

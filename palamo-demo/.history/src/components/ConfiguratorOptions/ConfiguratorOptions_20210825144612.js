@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from 'antd';
 
-const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updateWidthHandler }) => {
+const ConfiguratorOptions = ({ updateMaterialHandler }) => {
   function updateMaterial (material) {
     updateMaterialHandler(material);
   }

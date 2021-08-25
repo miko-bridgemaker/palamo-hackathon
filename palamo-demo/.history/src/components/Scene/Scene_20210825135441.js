@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ConfiguratorOptions from '../ConfiguratorOptions/ConfiguratorOptions';
 
 const Scene = () => {
@@ -50,20 +50,8 @@ const Scene = () => {
     }
 
     function updateMaterial(material) {
+      debugger
       setMaterial(material);
-    }
-
-    useEffect(() => {
-      handleMaterial();
-      handleCanvas();
-    }, [material, handleMaterial, handleCanvas]);
-
-    function updateHeight(e) {
-      console.log('eh', e);
-    }
-
-    function updateWidth(e) {
-      console.log('ew', e);
     }
 
     window.addEventListener('load', function() {
@@ -107,7 +95,7 @@ const Scene = () => {
             <button onClick={() => finishing(1)}>Make it matte</button>
             <button onClick={() => (handleMaterial(), handleCanvas(), handleVarnish())}>Update varnish</button>
         </div>
-        <ConfiguratorOptions updateMaterialHandler={updateMaterial} updateHeightHandler={updateHeight} updateWidthHandler={updateWidth} />
+        <ConfiguratorOptions updateMaterialHandler={updateMaterial}/>
       </div>
     )
 }

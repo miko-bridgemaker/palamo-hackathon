@@ -19,37 +19,6 @@
     display: block;
   }
 
-  &-size {
-    &-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-    }
-
-    &-input-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 32px;
-
-      label {
-        font-size: 10px;
-        line-height: 20px;
-        color: #979797;
-        display: block;
-        margin-bottom: 32px;
-      }
-
-      input {
-        margin-bottom: 32px;
-      }
-    }
-  }
-
   &-item {
     margin-bottom: 60px;
     display: flex;
@@ -100,7 +69,7 @@
       }
 
       &-lightGrey {
-        background: #BFBFBF;
+        background: rgba(0, 0, 0, 0.25);;
       }
     }
   }

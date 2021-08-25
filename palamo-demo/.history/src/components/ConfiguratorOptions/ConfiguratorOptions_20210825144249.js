@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from 'antd';
 
-const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updateWidthHandler }) => {
+const ConfiguratorOptions = ({ updateMaterialHandler }) => {
   function updateMaterial (material) {
     updateMaterialHandler(material);
   }
@@ -16,8 +16,8 @@ const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updat
             <label>Width:</label>
           </div>
           <div className="ConfiguratorOptions-size-input-container">
-            <Input defaultValue={50} onChange={updateHeightHandler} />
-            <Input defaultValue={50} onChange={updateWidthHandler}/>
+            <Input defaultValue={50} />
+            <Input defaultValue={50} />
           </div>
           <div className="ConfiguratorOptions-size-input-container">
 

@@ -1,29 +1,13 @@
-import React from 'react';
-import { Input } from 'antd';
+import React, { useState } from 'react';
 
-const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updateWidthHandler }) => {
+const ConfiguratorOptions = ({ updateMaterialHandler }) => {
   function updateMaterial (material) {
+    console.log('updateMaterial:', material);
     updateMaterialHandler(material);
   }
 
   return (
     <article className="ConfiguratorOptions">
-      <section className="ConfiguratorOptions-Size">
-        <span className="ConfiguratorOptions-title">Size</span>
-        <div className="ConfiguratorOptions-size-container">
-          <div className="ConfiguratorOptions-size-input-container">
-            <label>Height:</label>
-            <label>Width:</label>
-          </div>
-          <div className="ConfiguratorOptions-size-input-container">
-            <Input defaultValue={50} onChange={updateHeightHandler} />
-            <Input defaultValue={50} onChange={updateWidthHandler}/>
-          </div>
-          <div className="ConfiguratorOptions-size-input-container">
-
-          </div>
-        </div>
-      </section>
       <section className="ConfiguratorOptions-Material">
         <span className="ConfiguratorOptions-title">Material</span>
         <div className="ConfiguratorOptions-item-container">
@@ -41,7 +25,7 @@ const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updat
           </div>
         </div>
         <div className="ConfiguratorOptions-item-container">
-          <div className="ConfiguratorOptions-item" onClick={updateMaterial.bind(this, 'linear-gradient(180deg, #D8D8D8 0%, #FFFFFF 23.83%, #F8F7F6 39.45%, #D8D8D8 59.76%, #FFFFFF 75.91%, #BABABA 91.54%)')}>
+          <div className="ConfiguratorOptions-item" onClick={updateMaterial.bind(this, 'linear-gradient(180deg, #D8D8D8 0%, #FFFFFF 23.83%, #F8F7F6 39.45%, #D8D8D8 59.76%, #FFFFFF 75.91%, #BABABA 91.54%);')}>
             <div className="ConfiguratorOptions-item-shape ConfiguratorOptions-item-shape-wave"></div>
             <span className="ConfiguratorOptions-item-title" data-material="4">Wave</span>
           </div>
@@ -49,44 +33,43 @@ const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updat
             <div className="ConfiguratorOptions-item-shape ConfiguratorOptions-item-shape-yellow"></div>
             <span className="ConfiguratorOptions-item-title" data-material="5">Yellow</span>
           </div>
-          <div className="ConfiguratorOptions-item" onClick={updateMaterial.bind(this, '#BFBFBF')}>
+          <div className="ConfiguratorOptions-item" onClick={updateMaterial.bind(this, '#FFF7EA')}>
             <div className="ConfiguratorOptions-item-shape ConfiguratorOptions-item-shape-lightGrey"></div>
             <span className="ConfiguratorOptions-item-title" data-material="6">Light grey</span>
           </div>
         </div>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
       </section>
-
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
-      <p>other options</p>
     </article>
   );
 }

@@ -21,6 +21,7 @@ const Scene = () => {
       };
 
     const handleMaterial = () =>{
+      debugger
       document.getElementById('material').style.background = `${material}`;
     }
 
@@ -56,15 +57,7 @@ const Scene = () => {
     useEffect(() => {
       handleMaterial();
       handleCanvas();
-    }, [material, handleMaterial, handleCanvas]);
-
-    function updateHeight(e) {
-      console.log('eh', e);
-    }
-
-    function updateWidth(e) {
-      console.log('ew', e);
-    }
+   }, [material, handleMaterial, handleCanvas]);
 
     window.addEventListener('load', function() {
       document.querySelector('input[type="file"]').addEventListener('change', function() {
@@ -107,7 +100,7 @@ const Scene = () => {
             <button onClick={() => finishing(1)}>Make it matte</button>
             <button onClick={() => (handleMaterial(), handleCanvas(), handleVarnish())}>Update varnish</button>
         </div>
-        <ConfiguratorOptions updateMaterialHandler={updateMaterial} updateHeightHandler={updateHeight} updateWidthHandler={updateWidth} />
+        <ConfiguratorOptions updateMaterialHandler={updateMaterial}/>
       </div>
     )
 }
