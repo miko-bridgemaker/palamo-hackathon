@@ -33,7 +33,7 @@ function Header() {
           <li className="header-right-side-nav-user-menu">
             <Avatar
               src={<img src={avatar1URL} alt="User avatar" width="32px" height="32px" />}
-              style={{"margin-right": "15px"}}
+              style={{marginRight: "15px"}}
             />
             <Dropdown overlay={menu} overlayClassName="header-right-side-nav-dropdown">
               <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>

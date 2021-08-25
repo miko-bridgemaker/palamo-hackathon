@@ -26,6 +26,12 @@
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
+
+      label {
+        font-size: 10px;
+        line-height: 20px;
+        color: #979797;
+      }
     }
 
     &-input-container {
@@ -34,19 +40,6 @@
       justify-content: space-around;
       align-items: center;
       width: 100%;
-      margin-bottom: 32px;
-
-      label {
-        font-size: 10px;
-        line-height: 20px;
-        color: #979797;
-        display: block;
-        margin-bottom: 32px;
-      }
-
-      input {
-        margin-bottom: 32px;
-      }
     }
   }
 
