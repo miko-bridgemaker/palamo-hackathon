@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ConfiguratorOptions from '../ConfiguratorOptions/ConfiguratorOptions';
+import Ruler from '../Ruler/Ruler';
 
 const Scene = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -39,8 +40,12 @@ const Scene = (props) => {
         document.getElementById('bleed').style.width = `${mmToPx(canvasWidth-3)}px`;
         document.getElementById('bleed').style.height = `${mmToPx(canvasHeight-3)}px`;
         document.getElementById('bleed').style.borderRadius = `${canvasRadius}px`;
-
+        document.getElementById('ruler').style.width = `${mmToPx(canvasWidth)}px`;
+        document.getElementById('ruler').style.height = `${mmToPx(canvasHeight)}px`;
       };
+
+      let rulerWidth = canvasWidth;
+      let rulerHeight = canvasHeight;
 
     const handleMaterial = () =>{
       document.getElementById('material').style.background = `${material}`;
@@ -133,6 +138,7 @@ const Scene = (props) => {
             <input onChange={handleChange} type='number' value={totalPrice}></input>
         </div>
         <ConfiguratorOptions updateMaterialHandler={updateMaterial} updateHeightHandler={updateHeight} updateWidthHandler={updateWidth} />
+        <Ruler width={rulerWidth} height={rulerHeight}/>
       </div>
     )
 }

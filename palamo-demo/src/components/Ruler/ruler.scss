@@ -1,0 +1,92 @@
+.ruler {
+    position: fixed;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+
+        div {
+            color: $clr-gray;
+        }
+
+        .ruler-width {
+            position: fixed;
+            color: $clr-gray;
+            background-color: $clr-bg;
+            display: inline-block;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 150%);
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .width-left:after {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 2px;
+            background: $clr-gray;
+            content: "";
+            width: 40%;
+            display: block;
+        }
+
+        .width-right:after {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            height: 2px;
+            background: $clr-gray;
+            content: "";
+            width: 40%;
+            display: block;
+        }
+
+        .ruler-height {
+            position: fixed;
+            color: $clr-gray;
+            z-index: $layer-1;
+            left: 0;
+            bottom: 50%;
+            transform: translate(-150%, 50%);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .height-left {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            background: $clr-gray;
+            content: "";
+            height: 40%;
+            display: block;
+        }
+
+        .height-top {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            background: $clr-gray;
+            content: "";
+            height: 40%;
+            display: block;
+        }
+
+        .height-bottom {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 2px;
+            background: $clr-gray;
+            content: "";
+            height: 40%;
+            display: block;
+        }
+
+}
