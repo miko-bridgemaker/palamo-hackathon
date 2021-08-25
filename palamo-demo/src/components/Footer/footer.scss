@@ -1,35 +1,51 @@
 .App-footer {
-    background-color: white;
+    background-color: $clr-black;;
     position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     bottom: 0;
-    height: 100px;
+    height: 86px;
     width: 100%;
     font-size: $font-sub;
+    padding: 10px 50px;
 
-    .footer-price {
-        display: flex;
-        width: 300px;
-        justify-content: space-around;
-        font-size: $font-headline;
-        font-weight: 900;
+    div {
+        color: $clr-white;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;  
+    }
+
+    a {
+        color: $clr-snd;
+    }
+
+    .footer-help {
+        text-align: center
     }
 
     .footer-cart {
-        color:pink;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+
+        .price-amount {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 140%;
+        }
 
         .ant-btn-primary {
             border-color: $clr-snd;
             background-color: $clr-snd;
+            
             span {
                 color: $clr-acc;
                 font-weight: 500;
-
-                svg {
-                    fill: $clr-acc;
-                }
             }
         }
     }

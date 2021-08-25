@@ -1,26 +1,17 @@
-import React from 'react'
-import { ShoppingCartOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import { React , useState } from 'react';
 import { Button } from 'antd';
 
-const Footer = () => {
-    let price = 65;
-
+const Footer = ( {price} ) => {
     return (
         <div className='App-footer'>
-            <div>Includes free shipping and Returns worldwide</div>
-            <div className='footer-price'>
-                <div className='price-total'>Your total</div>
-                <div className='price-amount'>{price} €</div>
-            </div>
+            <div className='footer-selivery'>Estimated Delivery: 7-9 workdays<br/>
+                Call us for overnight delivery</div>
+            <div className='footer-help' >Something doesn’t look right? <a href='https://palamo.com/t/16/kontakt' className='footer-help-link' target='_blank' rel="noreferrer">Get Help</a></div>
             <div className='footer-cart'>
-            <Button type="primary" shape="round" icon={<ShoppingCartOutlined />} size='large'>
-                Buy now
-            </Button>
-                    
-                    
-            <Button type="Default button" shape="round" icon={<QuestionCircleOutlined />} size='large'>
-                Get help
-            </Button>
+                <div className='price-amount'>Total: {price} €</div>
+                <Button type="primary" shape="round" size='large'>
+                    Buy
+                </Button>
             </div>
         </div>
     )
