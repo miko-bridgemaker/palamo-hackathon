@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import ConfiguratorOptions from '../ConfiguratorOptions/ConfiguratorOptions';
 
 const Scene = () => {
     const [canvasWidth, setCanvasWidth] = useState(200);
@@ -90,7 +89,6 @@ const Scene = () => {
             <button onClick={() => finishing(1)}>Make it matte</button>
             <button onClick={() => (handleMaterial(), handleCanvas(), handleVarnish())}>Update varnish</button>
         </div>
-        <ConfiguratorOptions />
       </div>
     )
 }
