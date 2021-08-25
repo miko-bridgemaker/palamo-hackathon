@@ -14,23 +14,23 @@ const ConfiguratorOptions = ({ updateMaterialHandler, updateHeightHandler, updat
     updateWidthHandler(parseInt(e.target.value));
   }
 
-  function updateShape (value) {
-    updateShapeHandler(value);
+  function updateShape (e) {
+    updateShapeHandler(parseInt(e.target.value));
   }
 
   return (
     <article className="ConfiguratorOptions">
       <section className="ConfiguratorOptions-Shape">
         <div className="ConfiguratorOptions-shape-container">
-          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, 0)}>
+          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, '')}>
             <div className="ConfiguratorOptions-shape-container-item-shape ConfiguratorOptions-shape-container-item-rectangular"></div>
             <span className="ConfiguratorOptions-item-title">rectangular</span>
           </div>
-          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, 0)}>
+          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, '')}>
             <div className="ConfiguratorOptions-shape-container-item-shape ConfiguratorOptions-shape-container-item-square"></div>
             <span className="ConfiguratorOptions-item-title">square</span>
           </div>
-          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, 1000000)}>
+          <div className="ConfiguratorOptions-shape-container-item" onClick={updateShape.bind(this, '')}>
             <div className="ConfiguratorOptions-shape-container-item-shape ConfiguratorOptions-shape-container-item-circle"></div>
             <span className="ConfiguratorOptions-item-title">circle</span>
           </div>

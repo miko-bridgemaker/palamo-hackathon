@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import ConfiguratorOptions from '../ConfiguratorOptions/ConfiguratorOptions';
-import Ruler from '../Ruler/Ruler';
 
 const Scene = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -22,7 +21,6 @@ const Scene = (props) => {
   const mmToPx = (e) => {
     return e*3.7795275591;
   }
-
     const [canvasWidth, setCanvasWidth] = useState(50);
     const [canvasHeight, setCanvasHeight] = useState(50);
     const [canvasRadius, setCanvasRadius] = useState(0);
@@ -38,16 +36,7 @@ const Scene = (props) => {
         document.getElementById('label').style.width = `${mmToPx(canvasWidth)}px`;
         document.getElementById('label').style.height = `${mmToPx(canvasHeight)}px`;
         document.getElementById('label').style.borderRadius = `${canvasRadius}px`;
-        document.getElementById('bleed').style.width = `${mmToPx(canvasWidth-3)}px`;
-        document.getElementById('bleed').style.height = `${mmToPx(canvasHeight-3)}px`;
-        document.getElementById('bleed').style.borderRadius = `${canvasRadius}px`;
-        document.getElementById('ruler').style.width = `${mmToPx(canvasWidth)}px`;
-        document.getElementById('ruler').style.height = `${mmToPx(canvasHeight)}px`;
-
       };
-
-      let rulerWidth = canvasWidth;
-      let rulerHeight = canvasHeight;
 
     const handleMaterial = () =>{
       document.getElementById('material').style.background = `${material}`;
@@ -85,7 +74,7 @@ const Scene = (props) => {
     useEffect(() => {
       handleMaterial();
       handleCanvas();
-    }, [material, canvasWidth, canvasHeight, canvasRadius, handleMaterial, handleCanvas]);
+    }, [material, canvasWidth, canvasHeight, handleMaterial, handleCanvas]);
 
     function updateHeight(height) {
       setCanvasHeight(height)
@@ -93,10 +82,6 @@ const Scene = (props) => {
 
     function updateWidth(width) {
       setCanvasWidth(width)
-    }
-
-    function updateShape(value) {
-      setCanvasRadius(value);
     }
 
     window.addEventListener('load', function() {
@@ -120,7 +105,6 @@ const Scene = (props) => {
             <div className='canvas' id='canvas'></div>
             <div className='background-material' id='material'></div>
             <div className='user-img' id='label'><img id="myImg" src="#"></img></div>
-            <div className='bleed' id='bleed'></div>
             {canvasHeight}px/{canvasWidth}px
             <button onClick={() => setCanvasHeight(canvasHeight+100)}>+ height</button>
             <button onClick={() => setCanvasWidth(canvasWidth+100)}>+ width</button>
@@ -144,7 +128,6 @@ const Scene = (props) => {
             <input onChange={handleChange} type='number' value={totalPrice}></input>
         </div>
         <ConfiguratorOptions updateMaterialHandler={updateMaterial} updateHeightHandler={updateHeight} updateWidthHandler={updateWidth} />
-        <Ruler width={rulerWidth} height={rulerHeight}/>
       </div>
     )
 }
