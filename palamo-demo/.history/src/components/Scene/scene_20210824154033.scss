@@ -1,14 +1,8 @@
 .app-scene {
+    width: 66vw;
+    height: 90vh;
     background-color: $clr-bg;
     margin-top: 100px;
-    grid-area: main;
-    max-height: 100%;
-    position: sticky;
-    overflow: hidden;
-    height: 100vh;
-    top: 0;
-
-
 
     .canvas {
         z-index: $layer-1;

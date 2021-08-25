@@ -6,48 +6,17 @@
   background: #fff;
   overflow-y: scroll;
   bottom: 100px;
-  text-align: center;
-  color: #979797;
-  padding-top: 30px;
-
-  &-title {
-    color: #979797;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 140%;
-    margin-bottom: 40px;
-    display: block;
-  }
 
   &-item {
-    margin-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    cursor: pointer;
-
-    &-title {
-      font-size: 12px;
-      line-height: 20px;
-      font-weight: 300;
-      color: #979797;
-    }
-
     &-container {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      flex-direction: row;
+      flex-direction: row
     }
 
     &-shape {
-      width: 45px;
-      height: 45px;
-      border-radius: 45px;
-      margin-bottom: 10px;
-
       &-grey {
         background: #979797;
       }

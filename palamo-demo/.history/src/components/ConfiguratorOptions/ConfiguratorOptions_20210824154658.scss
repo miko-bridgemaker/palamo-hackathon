@@ -1,0 +1,6 @@
+.ConfiguratorOptions {
+  grid-area: aside;
+  overflow-y: auto;
+  z-index: 10;
+  animation: animate-in 1s var(--bezier);
+}

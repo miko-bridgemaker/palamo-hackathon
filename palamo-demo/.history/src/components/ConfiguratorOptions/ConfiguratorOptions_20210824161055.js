@@ -18,8 +18,6 @@ function ConfiguratorOptions() {
             <div className="ConfiguratorOptions-item-shape ConfiguratorOptions-item-shape-darkYellow"></div>
             <span className="ConfiguratorOptions-item-title">Recycable Paper</span>
           </div>
-        </div>
-        <div className="ConfiguratorOptions-item-container">
           <div className="ConfiguratorOptions-item">
             <div className="ConfiguratorOptions-item-shape ConfiguratorOptions-item-shape-wave"></div>
             <span className="ConfiguratorOptions-item-title">Recycable Paper</span>

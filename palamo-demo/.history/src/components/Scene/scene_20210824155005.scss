@@ -1,6 +1,9 @@
 .app-scene {
+    // width: 66vw;
+    // height: 90vh;
     background-color: $clr-bg;
     margin-top: 100px;
+
     grid-area: main;
     max-height: 100%;
     position: sticky;
@@ -40,4 +43,12 @@
 
 .scene {
     margin-top: 100px;
+    height: 100%;
+    display: grid;
+    grid-template: "main aside" 1fr/9fr minmax(320px,1fr);
+    grid-gap: 0 var(--tds-size--6x);
+    -webkit-padding-end: var(--tds-size--6x);
+    padding-inline-end: var(--tds-size--6x);
+    scroll-margin-top: var(--tds-shell-header-height);
+    transition: none;
 }
